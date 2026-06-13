@@ -1,9 +1,9 @@
-# ADR-11: Estrategia de validación de datos (frontend y backend)
+# ADR-13: Estrategia de validación de datos (frontend y backend)
 
 - **Estado:** Propuesto
 - **Fecha:** 2026-06-12
-- **Ámbito:** Transversal (PWA ciudadana, plataforma admin y servicios de dominio)
-- **Relacionado con:** ADR-3 (stack), ADR-4 (Identity & Access), ADR-5 (offline), ADR-6 (servicios + contratos OpenAPI)
+- **Ámbito:** **Frontend móvil (PWA ciudadana)** + servicios de dominio. La mecánica de validación de formularios descrita aquí (Zod solo + composable) es específica de la PWA ciudadana; ver §3.6 para la plataforma admin.
+- **Relacionado con:** ADR-3 (stack), ADR-4 (Identity & Access), ADR-5 (offline), ADR-6 (servicios + contratos OpenAPI), Recomendaciones de Librerías y Frameworks
 
 ---
 
@@ -64,7 +64,7 @@ Regla: si la forma del dato cambia, **primero se actualiza el contrato OpenAPI**
 - **Reutilizable:** el mismo esquema valida el formulario, el payload que se envía al Gateway y (a futuro) el reporte antes de encolarlo offline.[^adr5]
 - **Encaja con la arquitectura por capas** del proyecto (servicios puros → composables → componentes delgados, MVVM).
 
-> Zod es una decisión de este ADR; no proviene del documento de recomendaciones de librerías. Alternativa evaluada: Valibot (más liviano). Se elige Zod por madurez y ecosistema.
+> El documento de recomendaciones de librerías propone **VeeValidate 4 + Zod** para formularios. Este ADR mantiene **Zod** como esquema, pero **prescinde de VeeValidate** en la PWA ciudadana y lo reemplaza por un composable propio con `safeParse` (ver §3.6 para el alcance por repositorio). Alternativa evaluada para el esquema: Valibot (más liviano); se elige Zod por madurez y ecosistema.
 
 ### 3.2. Estructura por capas
 
@@ -127,6 +127,21 @@ const zodRule = (schema: z.ZodTypeAny) => (val: unknown) => {
 ### 3.5. Validación de respuestas (opcional pero recomendado)
 
 Zod también valida lo que se **recibe** del Gateway: parsear la respuesta con un esquema entrega datos ya tipados y confiables, en vez de asumir la forma del payload.
+
+### 3.6. Alcance por repositorio: PWA ciudadana vs. plataforma admin
+
+La mecánica de las secciones 3.1–3.5 (**Zod solo + composable con `safeParse`**, sin librería de formularios) es la decisión de **este repositorio, la PWA ciudadana móvil**. Se justifica por sus formularios simples, su naturaleza mobile-first, su uso de inputs nativos dentro de `FormField` (§3.4) y la reutilización del mismo esquema para validar el reporte offline antes de encolarlo (§8).
+
+La **plataforma institucional / admin** es un **repositorio aparte** con un stack distinto (PrimeVue en lugar de Quasar, formularios de gestión complejos). Para esa app **no rige la mecánica Zod-solo de este ADR**, sino la recomendación del documento de librerías: **VeeValidate 4 + Zod** (`useForm` / `useField`), más adecuada para formularios con arrays dinámicos y validación por campo en tiempo real.
+
+| | **PWA ciudadana (este repo)** | **Plataforma admin (otro repo)** |
+|---|---|---|
+| Librería de componentes | Quasar (inputs nativos en `FormField`) | PrimeVue |
+| Integración del formulario | Composable propio + `safeParse` | VeeValidate 4 (`useForm`/`useField`) |
+| Schema / fuente de verdad | **Zod** | **Zod** |
+| Alineación con el contrato | OpenAPI → Zod / Pydantic | OpenAPI → Zod / Pydantic |
+
+> **Denominador común (transversal):** Zod como fuente de verdad del esquema, alineado al contrato OpenAPI y reflejado por Pydantic en el backend. **Lo específico de cada app** es *cómo* se conecta Zod al formulario (composable propio en móvil; VeeValidate en admin). La divergencia de este ADR frente al documento de recomendaciones —quitar VeeValidate (§3.1)— aplica **solo a la PWA ciudadana**.
 
 ## 4. Implementación — Backend (FastAPI + Pydantic)
 
