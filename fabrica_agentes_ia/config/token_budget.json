@@ -1,0 +1,13 @@
+{
+  "defaults": {
+    "max_context_tokens": 6000,
+    "max_agent_output_tokens": 3000,
+    "reserve_tokens": 512
+  },
+  "strategies": [
+    "seleccionar evidencias por keywords antes de construir prompts",
+    "guardar knowledge_base/evidence.jsonl para no releer documentos completos",
+    "exigir salida estructurada y breve por agente",
+    "fallar cerrado cuando falten citas"
+  ]
+}

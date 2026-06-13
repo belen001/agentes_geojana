@@ -1,0 +1,162 @@
+[
+  {
+    "path": "documentos\\ADR-1.1 Leaflet + OpenStreetMap.pdf",
+    "sha256": "32bdd49e29088f5830e1ab56df994c5a73a1c1a183a6ca841682e8236cc8d778",
+    "kind": "pdf",
+    "extraction_status": "ok",
+    "notes": [],
+    "text_chars": 7709
+  },
+  {
+    "path": "documentos\\ADR-10 Estrategia de integración geoespacial, desacoplamiento de proveedores de mapas y POI.pdf",
+    "sha256": "87372be566217e2048c22b0e13ac352f3efaf2f456de3d5e2ada63f25a363dd3",
+    "kind": "pdf",
+    "extraction_status": "ok",
+    "notes": [],
+    "text_chars": 9136
+  },
+  {
+    "path": "documentos\\ADR-11 Modelado de Base de Datos.pdf",
+    "sha256": "7d7b3016b81e4092e55c0d078f2961afb73a6003facb70a18550eca8a2ed408b",
+    "kind": "pdf",
+    "extraction_status": "ok",
+    "notes": [],
+    "text_chars": 4024
+  },
+  {
+    "path": "documentos\\ADR-2 Selección de estilo Arquitectónico.pdf",
+    "sha256": "9271025644ed4ff23fe625305ea75d3960700ccaaf0abbf67bc63bc4245fff39",
+    "kind": "pdf",
+    "extraction_status": "ok",
+    "notes": [],
+    "text_chars": 4605
+  },
+  {
+    "path": "documentos\\ADR-3 Selección de Tecnologías.pdf",
+    "sha256": "5a231730ac92fee97d2dad98ef5f22865a6c85e0f0893811455225d6c662ee5b",
+    "kind": "pdf",
+    "extraction_status": "ok",
+    "notes": [],
+    "text_chars": 8544
+  },
+  {
+    "path": "documentos\\ADR-4 Estrategia de autenticación y autorización.pdf",
+    "sha256": "f3904460d885f06f54980ffd5c809d170b2acd8357c45adc8a9ab73577a6c3a7",
+    "kind": "pdf",
+    "extraction_status": "ok",
+    "notes": [],
+    "text_chars": 9171
+  },
+  {
+    "path": "documentos\\ADR-6 Definición de servicios.pdf",
+    "sha256": "027cde2bfdb8c1d3342ef5c00c801a2972c0ce9c61408749b14c8b59d3798273",
+    "kind": "pdf",
+    "extraction_status": "ok",
+    "notes": [],
+    "text_chars": 16778
+  },
+  {
+    "path": "documentos\\ADR-8 Modelo de almacenamiento multimedia.pdf",
+    "sha256": "a13791d0972718595f31bad788da360eaa8eaafa507d86caeb6913800f55abaa",
+    "kind": "pdf",
+    "extraction_status": "ok",
+    "notes": [],
+    "text_chars": 3707
+  },
+  {
+    "path": "documentos\\ADR-9 Estrategia de caché de tiles offline.pdf",
+    "sha256": "13c8338974f546dab35f447e782c0d0fbeded59cda7e78612503f76fb7475ae7",
+    "kind": "pdf",
+    "extraction_status": "ok",
+    "notes": [],
+    "text_chars": 9404
+  },
+  {
+    "path": "documentos\\Analytics Service.pdf",
+    "sha256": "e16a247b480cdd62aa8979479e0418f1e72bc0985ec6602a800536c90b28f7f0",
+    "kind": "pdf",
+    "extraction_status": "ok",
+    "notes": [],
+    "text_chars": 9216
+  },
+  {
+    "path": "documentos\\Content Service.pdf",
+    "sha256": "f404303835d861e02520c4e20b06e6a79ab70b69e2ba6832b57abd97cca134a8",
+    "kind": "pdf",
+    "extraction_status": "ok",
+    "notes": [],
+    "text_chars": 9902
+  },
+  {
+    "path": "documentos\\Contrato de Endpoints.pdf",
+    "sha256": "b76bac76a4de84cbb1c3a1c47320e90776062e070a453c1475c13aed63df5363",
+    "kind": "pdf",
+    "extraction_status": "ok",
+    "notes": [],
+    "text_chars": 13657
+  },
+  {
+    "path": "documentos\\Guía de Design System — Geojana.pdf",
+    "sha256": "e8441a700deff2b21735ef99e5278908104a94f453d85030f3b71bc07b2ef0a7",
+    "kind": "pdf",
+    "extraction_status": "ok",
+    "notes": [],
+    "text_chars": 16774
+  },
+  {
+    "path": "documentos\\Identity & Access Service.pdf",
+    "sha256": "741813fd4fd20e9cfeeb64be37a7244a79fe3fd0a6bb09b71cd0c537f2f30082",
+    "kind": "pdf",
+    "extraction_status": "ok",
+    "notes": [],
+    "text_chars": 10002
+  },
+  {
+    "path": "documentos\\Institution Service.pdf",
+    "sha256": "90dacb8ec67ad96f44e066d51795fc140d215121932c2739c7611134743ea102",
+    "kind": "pdf",
+    "extraction_status": "ok",
+    "notes": [],
+    "text_chars": 13807
+  },
+  {
+    "path": "documentos\\Map Service.pdf",
+    "sha256": "37a35851d08f71d0d8ca33a4984f9d3f4f86a0cd5f4bd410c5bc0db6e7c7bf77",
+    "kind": "pdf",
+    "extraction_status": "ok",
+    "notes": [],
+    "text_chars": 5006
+  },
+  {
+    "path": "documentos\\Patrones de Diseño.pdf",
+    "sha256": "149e7c39c94c5ff0b2cd8e8f39f6b2b37fad38b410c889e790ac8a89c5a4e715",
+    "kind": "pdf",
+    "extraction_status": "ok",
+    "notes": [],
+    "text_chars": 4412
+  },
+  {
+    "path": "documentos\\Planteamiento de proyecto Geojana.docx",
+    "sha256": "a1cb75aafc88d17e9724be4ab7953425657da5799685e550a7077a81edf4b15b",
+    "kind": "docx",
+    "extraction_status": "ok",
+    "notes": [],
+    "text_chars": 39165
+  },
+  {
+    "path": "documentos\\Recomendaciones de Librerías y Frameworks.pdf",
+    "sha256": "d0814d1cfedabea74d1f17ed7f0328bb1d5aaa97a8a3b5349e7a1a37b20fd66d",
+    "kind": "pdf",
+    "extraction_status": "ok",
+    "notes": [],
+    "text_chars": 12122
+  },
+  {
+    "path": "documentos\\Sighting Service.pdf",
+    "sha256": "7d50205039d0b69a9508a1f172e3e41fa01e513bd9d909394ade1f6dc01402fc",
+    "kind": "pdf",
+    "extraction_status": "ok",
+    "notes": [],
+    "text_chars": 9350
+  }
+]

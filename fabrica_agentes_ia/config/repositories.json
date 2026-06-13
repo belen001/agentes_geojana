@@ -1,0 +1,53 @@
+{
+  "repositories": [
+    {
+      "name": "frontend_desktop",
+      "aliases": ["froneend_desktop"],
+      "responsibility": "Aplicacion de escritorio de Geojana.",
+      "context_focus": [
+        "design system",
+        "contrato de endpoints",
+        "autenticacion",
+        "mapas",
+        "flujos de usuario"
+      ],
+      "agent_policy": [
+        "No cambiar contratos backend desde el frontend.",
+        "Citar endpoints y reglas de UI con evidence_id.",
+        "Validar estados de carga, error y vacio."
+      ]
+    },
+    {
+      "name": "frontend_mobile",
+      "responsibility": "Aplicacion movil de Geojana.",
+      "context_focus": [
+        "design system",
+        "mapas",
+        "offline tiles",
+        "sightings",
+        "autenticacion"
+      ],
+      "agent_policy": [
+        "Priorizar ergonomia movil y estados offline.",
+        "No inventar permisos ni endpoints.",
+        "Citar reglas de servicio, mapa y UI con evidence_id."
+      ]
+    },
+    {
+      "name": "backend",
+      "responsibility": "Servicios backend, contratos, persistencia, seguridad e integraciones.",
+      "context_focus": [
+        "ADRs",
+        "contrato de endpoints",
+        "servicios",
+        "modelo de base de datos",
+        "autenticacion y autorizacion"
+      ],
+      "agent_policy": [
+        "Respetar ADRs antes de introducir tecnologia o patron nuevo.",
+        "No romper contratos consumidos por frontends.",
+        "Citar decisiones tecnicas y de dominio con evidence_id."
+      ]
+    }
+  ]
+}

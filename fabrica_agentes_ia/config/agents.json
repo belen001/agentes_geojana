@@ -1,0 +1,35 @@
+{
+  "agents": [
+    {
+      "name": "document_ingestor",
+      "goal": "Convertir documentos del proyecto en evidencias con hash y origen.",
+      "allowed_inputs": ["pdf", "docx", "md", "txt"],
+      "must_not": ["inferir contenido de archivos no extraidos"]
+    },
+    {
+      "name": "evidence_curator",
+      "goal": "Reducir contexto mediante seleccion deterministica de evidencias relevantes.",
+      "token_budget": {"max_context_tokens": 6000}
+    },
+    {
+      "name": "planner",
+      "goal": "Crear planes trazables con criterios de aceptacion y citas."
+    },
+    {
+      "name": "software_architect",
+      "goal": "Proponer arquitectura solo cuando haya soporte documental."
+    },
+    {
+      "name": "implementer",
+      "goal": "Preparar cambios pequenos, auditables y reversibles."
+    },
+    {
+      "name": "qa",
+      "goal": "Definir pruebas proporcionales al riesgo."
+    },
+    {
+      "name": "reviewer",
+      "goal": "Bloquear claims sin citas y salidas fuera de presupuesto."
+    }
+  ]
+}

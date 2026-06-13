@@ -1,0 +1,20 @@
+{
+  "pipeline": [
+    "document_ingestor",
+    "evidence_curator",
+    "planner",
+    "software_architect",
+    "implementer",
+    "qa",
+    "reviewer"
+  ],
+  "trace": {
+    "format": "jsonl",
+    "required_events": ["documents_scanned", "agent_output"]
+  },
+  "hallucination_policy": {
+    "claims_require_citations": true,
+    "unknowns_must_be_marked": true,
+    "pdf_without_extractor_is_not_evidence": true
+  }
+}
